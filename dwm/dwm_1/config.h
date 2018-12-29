@@ -23,7 +23,6 @@ static const char *colors[][3]  = {
 };
 
 /* tagging  1-terminal 2-folder-open 3-code 4-edit 5-star 6-steam 7-poo 8-discord 9-firefox*/
-                            /*  1   2    3    4    5    6    7    8    9*/
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
@@ -71,14 +70,14 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = 			{ "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_blue1, "-nf", col_magenta, "-sb", col_blue2, "-sf", col_gray2, NULL };
-static const char *termcmd[]  = 			{ "st", NULL };
-static const char *filemanager[] = 			{ "thunar",NULL };
-static const char *browser[] = 				{ "waterfox", NULL };
-static const char *discord[] = 				{ "discord", NULL };
-static const char *atom[] = 				{ "atom", NULL };
-static const char *lock[] = 				{ "/home/matesz/.config/i3lock/lock.sh", NULL };
-static const char *python[] = 				{ "st", "python3", NULL };
+static const char *dmenucmd[] =     { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_blue1, "-nf", col_magenta, "-sb", col_blue2, "-sf", col_gray2, NULL };
+static const char *termcmd[]  =     { "st", NULL };
+static const char *filemanager[] =  { "thunar",NULL };
+static const char *browser[] =      { "waterfox", NULL };
+static const char *discord[] =      { "discord", NULL };
+static const char *atom[] =         { "atom", NULL };
+static const char *lock[] =         { "/home/matesz/.config/i3lock/lock.sh", NULL };
+static const char *python[] =       { "st", "python3", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
