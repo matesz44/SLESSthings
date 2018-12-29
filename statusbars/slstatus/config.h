@@ -62,19 +62,19 @@ static const char unknown_str[] = "n/a";
 
 static const struct arg args[] = {
 	/* function format          argument */
-	{ kernel_release, 		"  %s |",			NULL			},
-	{ ipv4, 				"  %s",			"enp3s0"		},
-	{ netspeed_rx,			" ( %s ",			"enp3s0"		},
-	{ netspeed_tx,			"  %s) |",			"enp3s0"		},
-	{ cpu_perc, 			"  %s%% ",   	NULL			},
-	{ run_command,			"  %s°C |",		"cputemp"		},
-	{ ram_perc, 			"  %s%%",		NULL			},
-	{ ram_used, 			" (%s) |",				NULL			},
-//	{ ram_total,			" / %s) |",			NULL			},
-//	{ disk_used,			"  HDD: %s",		"/"				},
-//	{ disk_total,			" / %s |",			"/"				},
-	{ disk_free,			"  %s |",			"/"				},
+	{ kernel_release,	"  %s |",      NULL        },
+	{ ipv4, 		"  %s",        "enp3s0"    },
+	{ netspeed_rx,		" ( %s ",      "enp3s0"    },
+	{ netspeed_tx,		"  %s) |",     "enp3s0"    },
+	{ cpu_perc, 		"  %s%% ",     NULL        },
+	{ run_command,		"  %s°C |",    "cputemp"   },
+	{ ram_perc,             "  %s%%",      NULL        },
+	{ ram_used,             " (%s) |",      NULL        },
+//	{ ram_total,            " / %s) |",     NULL        },
+//	{ disk_used,            "  HDD: %s",   "/"         },
+//	{ disk_total,           " / %s |",      "/"         },
+	{ disk_free,            "  %s |",      "/"         },
 
-	{ datetime,				"  %s ",			"%F"	 		},
-	{ datetime,				"  %s",			"%T" 			},
+	{ datetime,             "  %s ",       "%F"        },
+	{ datetime,             "  %s",        "%T"        },
 };

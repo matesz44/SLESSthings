@@ -6,19 +6,16 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "artwiz anorexia.se:style=Regular:size=11" }; //"-*-profont-*-*-*-*-10-*-*-*-*-*-*-*" //"monospace:size=11"//artwiz anorexia.se:style=Regular:size=12
-static const char dmenufont[]       = "monospace:size=14";
-//static const char col_gray1[]       = "#222222";
-static const char col_blue1[]       = "#002b36";
-static const char col_gray1[]       = "#444444";
-//static const char col_gray3[]       = "#bbbbbb";
-static const char col_magenta[]       = "#d33682";
-static const char col_gray2[]       = "#eeeeee";
-//static const char col_cyan[]        = "#005577";
-static const char col_blue2[]        = "#073642";
-static const char col_green[]        = "#00ff00";
-static const char col_red[]        = "#ff0000";
+static const char dmenufont[]   = "monospace:size=14";
+static const char col_blue1[]   = "#002b36";
+static const char col_gray1[]   = "#444444";
+static const char col_magenta[] = "#d33682";
+static const char col_gray2[]   = "#eeeeee";
+static const char col_blue2[]   = "#073642";
+static const char col_green[]   = "#00ff00";
+static const char col_red[]     = "#ff0000";
 
-static const char *colors[][3]      = {
+static const char *colors[][3]  = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_magenta, col_blue1, col_gray1 },
 	[BarScheme]  = { col_green, col_blue1, col_gray2 },
@@ -26,7 +23,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging  1-terminal 2-folder-open 3-code 4-edit 5-star 6-steam 7-poo 8-discord 9-firefox*/
-/*							   1	2	 3	  4	   5	6	 7	  8	   9	*/
+                            /*  1   2    3    4    5    6    7    8    9*/
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
@@ -35,13 +32,13 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     	NULL,       NULL,       1 << 3,       1,           -1 },
-	{ "Firefox",  	NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Waterfox", 	NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "discord",  	NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "audacious", 	NULL,       NULL,       1 << 7,       0,           -1 },
-	{ "Thunar",	  	NULL,       NULL,       1 << 1,		  0,           -1 },
-	{ "Atom",	  	NULL,       NULL,       1 << 2,		  0,           -1 },
+	{ "Gimp",     	NULL,       NULL,       1 << 3,         1,           -1 },
+	{ "Firefox",  	NULL,       NULL,       1 << 8,         0,           -1 },
+	{ "Waterfox", 	NULL,       NULL,       1 << 8,         0,           -1 },
+	{ "discord",  	NULL,       NULL,       1 << 7,         0,           -1 },
+	{ "audacious", 	NULL,       NULL,       1 << 7,         0,           -1 },
+	{ "Thunar",  	NULL,       NULL,       1 << 1,         0,           -1 },
+	{ "Atom",  	NULL,       NULL,       1 << 2,         0,           -1 },
 };
 
 /* layout(s) */
@@ -87,7 +84,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	//{ MODKEY,                       XK_b,      togglebar,      {0} },
+	//{ MODKEY,                     XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -101,7 +98,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_d,      setlayout,      {.v = &layouts[3]} },
-	{ MODKEY|ShiftMask,		        XK_s,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY|ShiftMask,	        XK_s,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
