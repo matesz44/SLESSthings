@@ -74,6 +74,7 @@ static const struct arg args[] = {
 //	{ disk_used,            "  HDD: %s",   "/"         },
 //	{ disk_total,           " / %s |",      "/"         },
 	{ disk_free,            "  %s |",      "/"         },
+        { run_command,          "  %s |",        "$HOME/.config/suckless/programs/weather/weather.py" },
 
 	{ datetime,             "  %s ",       "%F"        },
 	{ datetime,             "  %s",        "%T"        },
